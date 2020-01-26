@@ -43,4 +43,4 @@ rm -rf $RPM_BUILD_ROOT
 
 %changelog
 * Mon Jan 13 2020 Ryan Cavicchioni <ryan@cavi.cc>
-- 
+- spiped 1.6.0
