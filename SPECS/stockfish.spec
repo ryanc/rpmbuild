@@ -4,15 +4,15 @@
 
 Name:            stockfish
 Version:         14 
-Release:         1%{?dist}
-Source0:         https://github.com/official-%{srcname}/%{name}/archive/sf_%{version}/%{srcname}-sf_%{version}.tar.gz
+Release:         0%{?dist}
+Source0:         https://github.com/official-%{name}/%{srcname}/archive/sf_%{version}.tar.gz#/%{srcname}-sf_%{version}.tar.gz
 Summary:         Powerful open source chess engine
 License:         GPLv3+
 URL:             http://%{name}chess.org
 
-BuildRequires:  gcc
 BuildRequires:  gcc-c++
 BuildRequires:  make
+BuildRequires:  xz
 
 %description
 Stockfish is a free UCI chess engine derived from Glaurung 2.1. It is not a
@@ -28,7 +28,9 @@ information about how to use Stockfish with your GUI.
 
 %build
 cd src
-make build ARCH=x86-64-modern
+%ifarch x86_64
+make %{?_smp_mflags} build ARCH=x86-64
+%endif
 
 %install
 cd src
@@ -38,3 +40,5 @@ make PREFIX=%{buildroot}%{_prefix} install
 %license Copying.txt
 %doc AUTHORS README.md
 %{_bindir}/%{name}
+
+%changelog
