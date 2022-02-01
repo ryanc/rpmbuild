@@ -1,13 +1,13 @@
 Name:           scid_vs_pc
 Version:        4.22
-Release:        1%{?dist}
+Release:        0%{?dist}
 Summary:        scid_vs_pc
 License:        GPL
 Source0:        https://downloads.sourceforge.net/project/scidvspc/source/%{name}-%{version}.tgz
 Source1:        scid_vs_pc.desktop
 
-BuildRequires:  tcl-devel tk-devel
-BuildRequires:  gcc
+BuildRequires:  tcl-devel
+BuildRequires:  tk-devel
 BuildRequires:  gcc-c++
 BuildRequires:  make
 
