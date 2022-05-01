@@ -3,7 +3,7 @@
 %global _vpath_srcdir src
 
 Name:            stockfish
-Version:         14.1 
+Version:         15
 Release:         0%{?dist}
 Source0:         https://github.com/official-%{name}/%{srcname}/archive/sf_%{version}.tar.gz#/%{srcname}-sf_%{version}.tar.gz
 Summary:         Powerful open source chess engine
