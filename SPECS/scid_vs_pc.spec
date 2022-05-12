@@ -1,5 +1,5 @@
 Name:           scid_vs_pc
-Version:        4.22
+Version:        4.23
 Release:        0%{?dist}
 Summary:        scid_vs_pc
 License:        GPL
